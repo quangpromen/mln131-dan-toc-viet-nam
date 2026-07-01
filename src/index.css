@@ -22,12 +22,24 @@
   animation-delay: 100ms;
 }
 
+.fade-delay-200 {
+  animation-delay: 200ms;
+}
+
 .fade-delay-300 {
   animation-delay: 300ms;
 }
 
+.fade-delay-400 {
+  animation-delay: 400ms;
+}
+
 .fade-delay-500 {
   animation-delay: 500ms;
+}
+
+.fade-delay-600 {
+  animation-delay: 600ms;
 }
 
 .fade-delay-700 {
