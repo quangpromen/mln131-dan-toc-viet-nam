@@ -13,10 +13,10 @@ export default function HeroSection() {
       }}
     >
       {/* Content Container */}
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-20 pb-4 flex flex-col justify-between h-full relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-24 pb-4 flex flex-col justify-between h-full relative z-10">
         
         {/* Main Content Area */}
-        <div className="flex-1 flex flex-col justify-center items-start max-w-3xl my-auto">
+        <div className="flex-1 flex flex-col justify-center items-start max-w-3xl">
           
           {/* Tagline Badge */}
           <div className="animate-fade-up fade-delay-100 mb-2 md:mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-lg">
@@ -27,14 +27,14 @@ export default function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="animate-fade-up fade-delay-300 font-extrabold tracking-tight text-white mb-2 md:mb-3 leading-[1.05] drop-shadow-md">
-            <span className="block text-[32px] md:text-[46px] lg:text-[54px] xl:text-[60px] bg-gradient-to-r from-[#FFD65A] via-[#FFF2A8] to-[#F8B400] bg-clip-text text-transparent">
+          <h1 className="animate-fade-up fade-delay-300 font-extrabold tracking-tight text-white mb-2 md:mb-3 leading-tight drop-shadow-md py-1">
+            <span className="block text-[32px] md:text-[46px] lg:text-[54px] xl:text-[60px] text-[#FFD65A] pb-1">
               BÌNH ĐẲNG
             </span>
-            <span className="block text-[32px] md:text-[46px] lg:text-[54px] xl:text-[60px] bg-gradient-to-r from-[#FFD65A] via-[#FFF2A8] to-[#F8B400] bg-clip-text text-transparent">
+            <span className="block text-[32px] md:text-[46px] lg:text-[54px] xl:text-[60px] text-[#FFD65A] pb-1">
               ĐOÀN KẾT
             </span>
-            <span className="block text-[32px] md:text-[46px] lg:text-[54px] xl:text-[60px] bg-gradient-to-r from-[#FFD65A] via-[#FFF2A8] to-[#F8B400] bg-clip-text text-transparent">
+            <span className="block text-[32px] md:text-[46px] lg:text-[54px] xl:text-[60px] text-[#FFD65A] pb-1">
               TƯƠNG TRỢ
             </span>
             <span className="block text-base md:text-xl lg:text-[24px] font-bold text-white tracking-widest mt-1">
