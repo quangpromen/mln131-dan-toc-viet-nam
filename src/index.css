@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Custom animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+/* Custom animation delays */
+.fade-delay-100 {
+  animation-delay: 100ms;
+}
+
+.fade-delay-300 {
+  animation-delay: 300ms;
+}
+
+.fade-delay-500 {
+  animation-delay: 500ms;
+}
+
+.fade-delay-700 {
+  animation-delay: 700ms;
+}
+
+.fade-delay-800 {
+  animation-delay: 800ms;
+}
+
+.fade-delay-900 {
+  animation-delay: 900ms;
+}
+
+.fade-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Base resets & styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #07111F;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Scroll indicator animation */
+@keyframes customBounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-scroll-down {
+  animation: customBounce 1.5s infinite;
+}
