@@ -619,11 +619,11 @@ export default function AchievementSection() {
               </span>
             </div>
 
-            <h2 className="animate-fade-up fade-delay-300 text-3xl md:text-5xl font-black tracking-tight leading-tight mb-6">
+            <h2 className="animate-fade-up fade-delay-300 text-3xl md:text-5xl font-black tracking-tight leading-snug mb-6">
               TỪ CHÍNH SÁCH
               <br />
               ĐẾN{" "}
-              <span className="bg-gradient-to-r from-[#FFD65A] via-[#DA251D] to-[#FFD65A] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#FFD65A] via-[#DA251D] to-[#FFD65A] bg-clip-text text-transparent inline-block py-1">
                 THÀNH TỰU THỰC TIỄN
               </span>
             </h2>
@@ -1003,75 +1003,43 @@ export default function AchievementSection() {
         <AchievementBlock
           id="giao-duc-va-viec-lam"
           title="5. Giáo dục đào tạo và giải quyết việc làm"
-          description="Nâng cao dân trí, phát triển chất lượng nguồn nhân lực thông qua đào tạo nghề nghiệp và phổ cập xóa mù chữ cho đồng bào các dân tộc thiểu số."
+          description="Đào tạo nghề nghiệp và giải quyết việc làm góp phần nâng cao tay nghề, tạo cơ hội thu nhập ổn định cho lao động vùng dân tộc thiểu số và miền núi."
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            
-            <div className="lg:col-span-5 bg-gradient-to-br from-indigo-900 to-indigo-950 text-white rounded-[24px] p-8 shadow-md flex flex-col justify-between text-left relative overflow-hidden">
-              <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-6 translate-y-6">
-                <SVGIcons.Book />
-              </div>
-              
-              <div>
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#FFD65A] border border-white/20 px-3 py-1 rounded-full bg-white/5 inline-block mb-6">
-                  PHỔ CẬP GIÁO DỤC CƠ SỞ
-                </span>
-                
-                <div className="mb-4">
-                  <span className="block text-4xl lg:text-5xl font-black text-[#FFD65A] tracking-tight mb-1">
-                    95.033
-                  </span>
-                  <span className="text-sm font-bold text-gray-300">
-                    người dân tham gia xóa mù chữ
-                  </span>
-                </div>
-                
-                <p className="text-xs text-gray-300 leading-relaxed font-medium">
-                  Thông qua 4.752 lớp học xóa mù chữ được tổ chức bài bản tại thôn bản, mang lại cơ hội đọc viết và tiếp cận tri thức thiết thực cho đồng bào.
-                </p>
-              </div>
-
-              <div className="mt-8 flex items-center justify-between border-t border-white/5 pt-4">
-                <span className="text-[10px] text-gray-400">Nguồn: CEMA / Bộ Dân tộc</span>
-                <a
-                  href={sourceLinks.cemaSummary.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-bold text-[#FFD65A] hover:underline flex items-center gap-0.5"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {educationJobStats.map((stat, idx) => {
+              const IconComp = SVGIcons[stat.icon];
+              return (
+                <div 
+                  key={idx}
+                  className="bg-white border border-gray-150 rounded-[20px] p-6 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-4 text-left"
                 >
-                  Link nguồn <SVGIcons.ExternalLink />
-                </a>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7 flex flex-col justify-between gap-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {educationJobStats.map((stat, idx) => {
-                  const IconComp = SVGIcons[stat.icon];
-                  return (
-                    <div 
-                      key={idx}
-                      className="bg-white border border-gray-150 rounded-[20px] p-5 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-4 text-left"
-                    >
-                      <div className="w-9 h-9 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0">
-                        {IconComp && <IconComp />}
-                      </div>
-                      <div>
-                        <h4 className="text-lg md:text-xl font-black text-[#07111F] leading-tight mb-0.5">
-                          {stat.value}
-                        </h4>
-                        <p className="text-xs font-semibold text-[#475569] leading-snug">
-                          {stat.label}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
+                  <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0">
+                    {IconComp && <IconComp />}
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-black text-[#07111F] leading-tight mb-1">
+                      {stat.value}
+                    </h4>
+                    <p className="text-xs font-semibold text-[#475569] leading-relaxed">
+                      {stat.label}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <SourceGroup primaryKey="governmentSummary" secondaryKey="cemaSummary" />
+          <div className="flex justify-end items-center mt-6 pt-4 border-t border-gray-100/50">
+            <a
+              href={sourceLinks.governmentSummary.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-[11px] md:text-xs font-semibold px-3 py-1 rounded-full border border-red-200 bg-red-50/40 hover:bg-red-50 text-[#DA251D] hover:border-[#DA251D] hover:shadow-sm transition-all duration-300 pointer-events-auto"
+            >
+              <SVGIcons.ShieldCheck />
+              <span>Nguồn chính: Báo Điện tử Chính phủ</span>
+              <SVGIcons.ExternalLink />
+            </a>
+          </div>
         </AchievementBlock>
 
         {/* ==================================================
