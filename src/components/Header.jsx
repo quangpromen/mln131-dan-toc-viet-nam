@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function Header() {
   const menuItems = [
-    { label: 'Mở đầu', href: '#mo-dau' },
-    { label: 'Chính sách dân tộc', href: '#chinh-sach' },
+    { label: 'Mở đầu', href: '#hero' },
+    { label: 'Chính sách dân tộc', href: '#chinh-sach-dan-toc' },
     { label: 'Thành tựu', href: '#thanh-tuu' },
-    { label: 'Phê phán chia rẽ', href: '#phe-phan' },
-    { label: 'Kêu gọi đoàn kết', href: '#keu-goi' }
+    { label: 'Phê phán chia rẽ', href: '#phe-phan-chia-re' },
+    { label: 'Kêu gọi đoàn kết', href: '#keu-goi-doan-ket' }
   ];
 
   return (

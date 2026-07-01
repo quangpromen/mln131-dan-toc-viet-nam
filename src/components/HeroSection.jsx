@@ -3,6 +3,7 @@ import React from 'react';
 export default function HeroSection() {
   return (
     <section 
+      id="hero"
       className="relative h-screen w-full flex items-center justify-start overflow-hidden bg-cover bg-center select-none"
       style={{
         backgroundImage: `
@@ -91,12 +92,18 @@ export default function HeroSection() {
 
           {/* Action Buttons */}
           <div className="animate-fade-up fade-delay-1000 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <button className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-white bg-[#DA251D] hover:bg-[#ff3b33] transition-all duration-300 shadow-[0_4px_15px_rgba(218,37,29,0.3)] hover:shadow-[0_6px_20px_rgba(218,37,29,0.55)] hover:scale-105 active:scale-95 text-center">
+            <a 
+              href="#chinh-sach-dan-toc" 
+              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-white bg-[#DA251D] hover:bg-[#ff3b33] transition-all duration-300 shadow-[0_4px_15px_rgba(218,37,29,0.3)] hover:shadow-[0_6px_20px_rgba(218,37,29,0.55)] hover:scale-105 active:scale-95 text-center flex items-center justify-center"
+            >
               Bắt đầu thuyết trình
-            </button>
-            <button className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-white border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 active:scale-95 text-center backdrop-blur-sm">
+            </a>
+            <a 
+              href="#chinh-sach-dan-toc" 
+              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-white border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 active:scale-95 text-center backdrop-blur-sm flex items-center justify-center"
+            >
               Xem chính sách dân tộc
-            </button>
+            </a>
           </div>
 
         </div>
